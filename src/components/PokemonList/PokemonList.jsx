@@ -45,11 +45,17 @@ function PokemonList() {
   return (
     <div className="pokemon-list">
       <h4>Pokemon List</h4>
-      {isLoading ? (
-        "Loading..."
-      ) : (
-        pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
-      )}
+      <div className="pokemon-grid">
+        {isLoading ? (
+          "Loading..."
+        ) : (
+          pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
+        )}
+      </div>
+      <div className="pagination">
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
     </div>
   );
 }
