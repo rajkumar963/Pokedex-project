@@ -4,7 +4,6 @@ import "./Pokedex.css";
 function Pokedex() {
     return (
         <div className="pokedex">
-            <h1 >Pokedex</h1>
             <Search/>
             <PokemonList/>
         </div>
